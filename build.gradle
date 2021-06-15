@@ -18,6 +18,7 @@ repositories {
     mavenCentral()
 }
 
+// Spring Boot Overriding for SpringDataJpa
 ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {

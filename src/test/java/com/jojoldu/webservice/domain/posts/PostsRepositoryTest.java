@@ -1,6 +1,7 @@
 package com.jojoldu.webservice.domain.posts;
 
-import org.junit.After;
+
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @After
+    @AfterEach
     public void cleanup() {
         postsRepository.deleteAll();
     }
@@ -38,8 +39,8 @@ class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTitle()).isEqualTo("테스트 게시글");
-        assertThat(posts.getContent()).isEqualTo("테스트 본문");
+        assertThat(posts.getTitle()).isEqualTo("테스트1");
+        assertThat(posts.getContent()).isEqualTo("테스트1의 본문");
     }
 
     @Test
